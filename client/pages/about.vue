@@ -1,4 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// const { data } = await useFetch("/api/ninja?name=soya");
+// const { data } = await useFetch("/api/ninja?name=soya", {
+//   method: "post",
+//   body: { age: 30 },
+// });
+
+const { data } = await useFetch("/api/currency/GWW");
+console.log(data);
+</script>
 <template>
   <div>
     <v-card elevation="3">
@@ -12,6 +21,7 @@
           옆자리에는 무슨 생각을 하고 있는지 모를 그녀가 생일 선물로 받은
           아이패드를 가지고 공간을 탐구하고 있다. 기분이 좋아 보여 웃음이 난다.
         </p>
+        <p>{{ data }}</p>
       </v-card-text>
     </v-card>
   </div>

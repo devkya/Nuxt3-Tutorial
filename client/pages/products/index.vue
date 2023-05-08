@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { Product } from "@/types/item";
+
 definePageMeta({
   layout: "products",
+});
+useHead({
+  title: "Nuxt Product",
+  meta: [{ name: "description", content: "Nuxt Product" }],
 });
 
 // get all products
